@@ -1,0 +1,236 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f90;
+}
+
+.book-now {
+    background-color: #f90;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('Intro_pic.jpg') no-repeat center center/cover;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* Introduction Section */
+.introduction {
+    background: url('interior.jpg') no-repeat center center/cover;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.introduction .overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.introduction img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rooms & Suites Section */
+.rooms-suites {
+    background-color: #f4f4f4;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.rooms-suites .room {
+    display: inline-block;
+    width: 45%;
+    margin: 2.5%;
+    vertical-align: top;
+    text-align: left;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rooms-suites .room:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.rooms-suites .room img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #f90;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #cc7a00;
+}
+
+/* Amenities Section */
+.amenities {
+    background: url('amenities_background.jpg') no-repeat center center/cover;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.amenities .amenity {
+    display: inline-block;
+    width: 30%;
+    margin: 1.5%;
+    text-align: center;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.amenities .amenity:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.amenities .amenity img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5em;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+.newsletter input[type="email"] {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+}
+
+.newsletter button {
+    padding: 0.5em;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #f90;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #cc7a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .rooms-suites .room,
+    .amenities .amenity {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+        padding: 0.5em;
+    }
+}
